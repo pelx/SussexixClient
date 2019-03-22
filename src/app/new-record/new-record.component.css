@@ -1,0 +1,13 @@
+.new-record-form {
+	width: 80%;
+	margin: 5% 20%;
+}
+
+.new-record-field {
+	width: 70%;
+	margin: 1% 20%;
+}
+
+.new-form-btn {
+	position: relative;
+}

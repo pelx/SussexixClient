@@ -1,0 +1,39 @@
+<mat-card>
+  <span>Create a New Record</span> 
+  <form [formGroup]="recordForm">
+    <mat-form-field class="new-record-field">
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      
+    <mat-form-field class="new-record-field">
+      <input matInput placeholder="Teacher">
+    </mat-form-field>
+    
+    <mat-form-field class="new-record-field">
+        <input matInput placeholder="Topic">
+    </mat-form-field>
+    
+    <mat-form-field class="new-record-field">
+        <input matInput placeholder="Type">
+    </mat-form-field >
+    
+    <mat-form-field class="new-record-field">
+        <input matInput placeholder="Notes">
+    </mat-form-field>
+    
+   <button mat-raised-button>Create New Record</button>
+    
+  </form>
+</mat-card>
+
+<!-- date: new FormControl(''),
+		day: new FormControl(''),
+		durationt: new FormControl(''),
+		id: new FormControl(''),
+		notes: new FormControl(''),
+		strId: new FormControl(''),
+		teacher: new FormControl(''),
+		topic: new FormControl(''),
+		type: new FormControl('') -->

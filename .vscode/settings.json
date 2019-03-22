@@ -1,0 +1,9 @@
+{
+  "editor.trimAutoWhitespace": false,
+  "editor.cursorStyle": "underline",
+  "editor.fontWeight": "600",
+  "editor.foldingStrategy": "indentation",
+  "prettier.breakProperty": true,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Visual Studio Dark"
+}
