@@ -1,11 +1,11 @@
 export interface RecordElement {
-	date: string;
-	day: number;
-	durationt: number;
 	id: number;
-	notes: string;
+	day: number;
+	recordDate: Date;
+	minuets: number;
 	strId: string;
 	teacher: string;
 	topic: string;
 	type: string;
+	segment: number;
 }

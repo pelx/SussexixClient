@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-header>
+      <mat-card-title>Are You Sure?</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item><b>Record Date:</b>{{record.recordDate}}</mat-list-item>
+      <mat-divider></mat-divider>
+      
+      <mat-list-item><b>Teacher:</b>{{record.teacher}}</mat-list-item>
+      <mat-divider></mat-divider>
+      
+      <mat-list-item><b>Topic:</b>{{record.topic}}</mat-list-item>
+      <mat-divider></mat-divider>
+      
+      <mat-list-item><b>Type:</b>{{record.type}}</mat-list-item>
+    </mat-list>
+    
+  </mat-card-content>
+  <mat-card-actions>
+      <button mat-flat-button (click)="cancel()">Cancel</button>
+      <button mat-flat-button color="primary" (click)="confirm()">Confirm</button>
+  </mat-card-actions>
+  
+</mat-card>

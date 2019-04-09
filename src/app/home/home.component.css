@@ -1,0 +1,20 @@
+/*
+COLORS:
+light:#C1D9F3
+medium:#46688E
+dark:#3D4EAE
+*/
+
+.mat-card {
+	/* margin: 1% 2%; */
+	height: 80vh;
+	/* width: 96vw; */
+	/* align-self: flex-end; */
+	background-image: linear-gradient(to right bottom, rgba(193, 217, 243, 0.801), rgba(61, 78, 174, 0.801)),
+		url(../../assets/img/yoann-boyer-185507-unsplash.jpg);
+	/* background-size: cover; */
+	background-position: top;
+	background-size: cover;
+}
+
+/*  */

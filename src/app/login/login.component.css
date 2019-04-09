@@ -1,0 +1,19 @@
+.mat-card {
+	margin: 5%;
+	align-items: flex-start;
+}
+.mat-card-content {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.mat-form-field {
+	width: 90%;
+	/* margin-left: 10%;
+	margin-right: 10%; */
+}
+
+.mat-card-actions {
+	position: center;
+}

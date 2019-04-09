@@ -1,0 +1,22 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.mat-card {
+	margin: 5%;
+}
+
+.mat-form-field {
+	width: 90%;
+	/* margin-left: 10%;
+	margin-right: 10%; */
+}
+
+.new-form-button {
+	position: relative;
+}
+.warn {
+	color: red;
+}

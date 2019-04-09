@@ -1,29 +1,32 @@
 <mat-card>
-  <span>Create a New Record</span> 
-  <form [formGroup]="recordForm">
+  <span>Create New Record</span> 
+  <form [formGroup]="recordForm" (ngSubmit)="onSubmit()">
     <mat-form-field class="new-record-field">
-        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="recordDate">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
       
     <mat-form-field class="new-record-field">
-      <input matInput placeholder="Teacher">
+      <input matInput placeholder="Teacher" formControlName="teacher">
     </mat-form-field>
     
     <mat-form-field class="new-record-field">
-        <input matInput placeholder="Topic">
+        <input matInput placeholder="Topic" formControlName="topic">
     </mat-form-field>
     
     <mat-form-field class="new-record-field">
-        <input matInput placeholder="Type">
+        <mat-select placeholder="Record Type" formControlName="type">
+          <mat-option *ngFor="let type of types" [value]="type.value">
+            {{type.value}}
+          </mat-option>
+        </mat-select>
     </mat-form-field >
+    <button mat-raised-button class="new-record-field" [disabled]="!recordForm.valid">Create New</button>
     
-    <mat-form-field class="new-record-field">
+    <!-- <mat-form-field class="new-record-field">
         <input matInput placeholder="Notes">
-    </mat-form-field>
-    
-   <button mat-raised-button>Create New Record</button>
+    </mat-form-field> -->
     
   </form>
 </mat-card>

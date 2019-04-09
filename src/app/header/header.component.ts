@@ -1,3 +1,4 @@
+import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 	title: string = 'Sussex IX MP3 Records Management Catalogue';
 
-	constructor() {}
+	constructor(private auth: AuthService) {}
 
 	ngOnInit() {}
 }

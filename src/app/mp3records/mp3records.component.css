@@ -1,0 +1,13 @@
+table {
+	width: 100%;
+	border-spacing: 4px;
+	border-color: rgb(17, 21, 36);
+}
+
+th {
+	text-align: left;
+}
+.mat-table-container {
+	height: 66vh;
+	overflow: auto;
+}

@@ -1,0 +1,44 @@
+<h2 mat-dialog-title>Update Record</h2>
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field >
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="recordDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+     <br> 
+    <mat-form-field>
+      <input matInput placeholder="Teacher" formControlName="teacher">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input matInput placeholder="Topic" formControlName="topic">
+    </mat-form-field>
+     <br>
+    <mat-form-field>
+        <mat-select placeholder="Record Type" formControlName="type">
+          <mat-option *ngFor="let type of types" [value]="type.value">
+            {{type.value}}
+          </mat-option>
+        </mat-select>
+    </mat-form-field >
+    <br>
+    <!-- invisible -->
+    <mat-form-field>
+        <input [hidden]= "true" matInput  formControlName="day">
+    </mat-form-field>
+    <mat-form-field >
+        <input  [hidden]="true" matInput  formControlName="strId">
+    </mat-form-field>
+    <mat-form-field>
+        <input  [hidden]="true" matInput  formControlName="minuets">
+    </mat-form-field>
+    <mat-form-field>
+        <input  [hidden]="true" matInput  formControlName="segment">
+    </mat-form-field>
+    
+  
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-raised-button (click)="close()">Close</button>
+    <button mat-raised-button color="primary" (click)="save()">Save</button>
+</mat-dialog-actions>

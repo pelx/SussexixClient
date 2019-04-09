@@ -1,8 +1,11 @@
 <!-- <button mat-fab>Click</button> -->
-
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Enter Filter">
+</mat-form-field>
+ <div class="mat-table-container mat-elevation-z8">
+<table mat-table [dataSource]="dataSource">
   <!--Date -->
-  <ng-container matColumnDef="recordDate">
+  <ng-container matColumnDef="recordDate" sticky>
     <th mat-header-cell *matHeaderCellDef> Date </th>
     <td mat-cell *matCellDef="let element"> {{element.recordDate | date: 'd MMM yyyy'}} </td>
   </ng-container>
@@ -20,14 +23,32 @@
   </ng-container>
 
   <!-- Duration -->
-  <ng-container matColumnDef="minuets">
-    <th mat-header-cell *matHeaderCellDef> Duration </th>
-    <td mat-cell *matCellDef="let element"> {{element.minuets}} </td>
+  <ng-container matColumnDef="type">
+    <th mat-header-cell *matHeaderCellDef> Type </th>
+    <td mat-cell *matCellDef="let element"> {{element.type}} </td>
   </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  
+  <!-- Actions -->
+  <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element" stickyEnd>
+        <button (click)="playRecord(element)" color="accent" mat-mini-fab aria-label="Play" >
+            <mat-icon>play_circle_filled</mat-icon>
+        </button>
+            <!-- <a mat-mini-fab routerLink=".">Link</a> -->
+        
+         <!-- <button (click)="updateRecord(element)" mat-flat-button color="primary">
+           <mat-icon color="white">edit</mat-icon>
+           Edit </button> -->
+        <!-- <button [routerLink]="['/delete-record', element.id ]" mat-flat-button color="warn">
+          <mat-icon color="white">delete_sweep</mat-icon>
+          Delete</button></td> -->
+    </ng-container>
+    
+  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
-
+</div> 
+<mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[10, 20, 30, 50]"></mat-paginator>
 
 
